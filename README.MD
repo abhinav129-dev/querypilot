@@ -62,6 +62,40 @@ python -m streamlit run app.py
 
 Open the local URL shown in your terminal, usually `http://localhost:8501`.
 
+## Web App (Next.js + FastAPI)
+
+The project also ships a Next.js workspace UI and a FastAPI backend.
+
+### One-command setup
+
+From the project root:
+
+```powershell
+npm install
+npm run dev
+```
+
+- Frontend: http://localhost:3000
+- API: http://localhost:8000 (health check: `/api/health`)
+
+`npm run dev` starts both processes in one terminal with prefixed logs (`[api]` and `[web]`). It uses the virtual environment at `.venv/Scripts/python.exe` directly, so no separate activation is needed. Press `Ctrl+C` to stop both processes.
+
+### Fresh clone
+
+If `frontend/node_modules` is missing, install the frontend dependencies once:
+
+```powershell
+npm --prefix frontend install
+```
+
+### Prerequisites
+
+The backend requires the Python packages from `requirements.txt` (install them inside `.venv`):
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
 ## How It Works
 
 1. A user submits a business question.
