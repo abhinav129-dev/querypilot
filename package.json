@@ -1,0 +1,15 @@
+{
+  "name": "querypilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first AI data analyst — Next.js frontend and FastAPI backend.",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names api,web --prefix-colors green,blue \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": ".\\.venv\\Scripts\\python.exe -m uvicorn backend.main:app --port 8000 --reload",
+    "dev:web": "npm --prefix frontend run dev",
+    "setup": "npm install && npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

@@ -1,17 +1,22 @@
+# Node.js
+node_modules/
+.next/
+frontend/.next/
+npm-debug.log*
+
 # Python
 .venv/
 __pycache__/
 *.py[cod]
 
-# Local databases and data
+# Local databases
 *.duckdb
 *.duckdb.wal
 
-# Secrets
-.env
-.streamlit/secrets.toml
+# Logs
+*.log
 
-# Editor and OS files
-.vscode/
-.DS_Store
-Thumbs.db
+# Environment variables
+.env
+.env.*
+!.env.example
